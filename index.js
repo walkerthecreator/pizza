@@ -1,19 +1,43 @@
-const { prepareOrder , takeOrder } = require('./order.js')
-// #1 create a function which takes user name as argument then generate an order id and return it 
-// #2 after every 3 sec a order will be cooked 
+const fs = require('node:fs') 
+
+// fs.readFile('index.txt' , "utf-8" , (err , data)=>{
+
+//     if(err){
+//         console.log("oops something went wrong" , err)
+//     }
+//     else{
+//         console.log(data)
+//     }
+// }  )
+// console.log(data2 , "returned")
 
 
-takeOrder("nitin")
-takeOrder("aman")
-takeOrder("arpit")
+// const data = fs.readFileSync("index.txt" , "utf-8")
+// console.log(data)
 
- let timer =  setInterval(()=>{
 
-    let length = prepareOrder() // 2
 
-    if(length == 0 ){
-        clearInterval(timer)
-    }
-    
-} , 1000)
+// fs.readFileSync
+//   (filepath , encoding , callback)
 
+
+// syntax = (filepath, data you want to add in file )
+// fs.writeFile('inde.txt' , "hello from index js " , (err , data)=>{
+//     if(err) console.log(err)
+// })
+
+// fs.writeFileSync('new.html' , "<h1>heello</h1>")
+
+// fs.appendFile("index.txt" , "new line added" , (err , data) =>  {
+//     if(err){
+//         console.log('error ' , err)
+//     }
+
+//     console.log(data)
+// })
+
+// fs.appendFileSync("index.htm" , "new line async" )
+
+fs.unlink("index.htm" , (err )=>{
+    if(err) console.log('err')
+})
